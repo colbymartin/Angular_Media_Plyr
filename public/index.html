@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/4b38063e68.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <main ng-app="MediaPlayer">
+        <section ng-controller="SongController">
+            <ul>
+                <li><h3>TUNES</h3></li>
+                <li>
+                    <img ng-src="{{nowPlaying.cover}}">
+                </li>
+                <li>{{nowPlaying.title}} by {{nowPlaying.artist}}</li>
+            </ul>
+            <ul>
+                <li ng-repeat="song in songs">
+                    {{song.title}}  |  {{song.artist}}  |  {{song.album}}  |  {{song.durationMin}}:{{song.durationSec}}
+                    <button ng-click="playSong(song)">
+                        <span ng-if="song.playing === true"><i class="fa fa-stop" aria-hidden="true"></i></span>
+                        <span ng-if="song.playing === false"><i class="fa fa-play" aria-hidden="true"></i></span>
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

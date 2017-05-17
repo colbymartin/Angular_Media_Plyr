@@ -1,0 +1,14 @@
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid; 
+
+@import "layout";
+
+body {
+    color: white;
+    background-image: url('http://www.harrypeat.com/wp-content/uploads/2014/05/Abstract_Background_Wallpaper_0181.jpg');
+    button {
+        color: white;
+    }
+}

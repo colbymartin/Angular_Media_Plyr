@@ -1,0 +1,12 @@
+ul {
+    list-style: none;
+}
+
+
+section {
+    @include grid-row();
+    text-align: center;
+    ul {
+        @include grid-column(12);
+    }
+}
